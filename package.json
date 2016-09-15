@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/luchohero/sismus-web-service#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "4.13.3"
   }
 }
