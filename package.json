@@ -1,26 +1,27 @@
+
 {
-  "name": "sismus-web-service",
-  "version": "6.1.4",
-  "description": "Sismus Android App",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.14.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "node index.js"
-  },
+  "name": "lucho",
+  "version": "1.2.7",
+  "description": ":D",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luchohero/sismus-web-service.git"
+    "url": "https://github.com/luchohero/sismus-web-service.git"
   },
-  "author": "Lucho Hero",
+  "author": "luchohero",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/luchohero/sismus-web-service/issues"
   },
   "homepage": "https://github.com/luchohero/sismus-web-service#readme",
   "dependencies": {
+    "express": "^4.14.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
     "express": "4.13.3"
   }
 }
