@@ -1,5 +1,5 @@
 {
-  "name": "simus",
+  "name": "sismus",
   "version": "1.0.0",
   "description": "Web Service de SIMUS APP",
   "main": "xml.js",
@@ -11,8 +11,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node xml"
+    "test": "node xml.js"
   },
   "author": "Lucho Hero",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luchohero/sismus-web-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luchohero/sismus-web-service/issues"
+  },
+  "homepage": "https://github.com/luchohero/sismus-web-service#readme"
 }

@@ -5,7 +5,6 @@ var app = express();
 
 app.get("/", function (req, res) {
 
-
     var gsaReq = http.get("http://127.0.0.1/eventos.xml", function (response) {
         var completeResponse = '';
 
