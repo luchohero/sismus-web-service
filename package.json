@@ -1,0 +1,18 @@
+{
+  "name": "simus",
+  "version": "1.0.0",
+  "description": "Web Service de SIMUS APP",
+  "main": "xml.js",
+  "dependencies": {
+    "xml2js": "^0.4.17",
+    "express": "^4.14.0",
+    "eyes": "^0.1.8",
+    "async": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node xml"
+  },
+  "author": "Lucho Hero",
+  "license": "ISC"
+}
