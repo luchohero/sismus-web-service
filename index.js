@@ -1,6 +1,6 @@
 var http = require('http');
 var express = require('express');
-var parseString = require('xml2js').parseString;
+
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
