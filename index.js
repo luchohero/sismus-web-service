@@ -3,11 +3,11 @@ var express = require('express');
 var parseString = require('xml2js').parseString;
 var app = express();
 
-app.set('port', (process.env.PORT || 8000));
+app.set('port', (process.env.PORT || 8080));
 
 app.get("/", function (req, res) {
 
-    var gsaReq = http.get("http://127.0.0.1/eventos.xml", function (response) {
+    var gsaReq = http.get("http://www.igepn.edu.ec/portal/ultimo-sismo/events.xml", function (response) {
         var completeResponse = '';
 
         response.on('data', function (chunk) {
@@ -31,6 +31,7 @@ app.get("/", function (req, res) {
             });
         })
     }).on('error', function (e) {
+      res.send("fallo");
         console.log('problem with request: ' + e.message);
     });
 
