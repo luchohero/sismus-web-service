@@ -19,14 +19,15 @@ app.get("/", function (req, res) {
         response.on('end', function() {
             //console.log(completeResponse);
             parseString(completeResponse, function (err, result) {
-                console.dir(result);
+                //console.dir(result);
                 var obj = result.markers.marker;
                 for(i in obj){
-                  console.log(obj[i].$);
+                  //console.log(obj[i].$);
                 }
 
-                res.setHeader('Content-Type', 'application/json');
-                res.send(JSON.stringify(result.markers.marker));
+                //res.setHeader('Content-Type', 'application/json');
+                //res.send(JSON.stringify(result.markers.marker));
+                res.send("s");
             });
         })
     }).on('error', function (e) {
