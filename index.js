@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var parseString = require('xml2js');
+var parseString = require('xml2js').parseString;;
 
 app.set('port', (process.env.PORT || 5000));
 app.get("/", function (req, res) {
