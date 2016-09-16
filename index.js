@@ -25,13 +25,13 @@ app.get("/", function (req, res) {
                   //console.log(obj[i].$);
                 }
 
-                //res.setHeader('Content-Type', 'application/json');
-                //res.send(JSON.stringify(result.markers.marker));
-                res.send("s");
+                res.setHeader('Content-Type', 'application/json');
+                res.send(JSON.stringify(result.markers.marker));
+                //res.send("s");
             });
         })
     }).on('error', function (e) {
-      res.send("fallo");
+      res.send(e.message);
         console.log('problem with request: ' + e.message);
     });
 
