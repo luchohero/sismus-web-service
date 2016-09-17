@@ -3,7 +3,7 @@ var express = require('express');
 var parseString = require('xml2js').parseString;
 var app = express();
 
-app.set('port', (process.env.PORT || 8080));
+app.set('port', (process.env.PORT || 8000));
 
 app.get("/", function (req, res) {
 
@@ -20,13 +20,16 @@ app.get("/", function (req, res) {
             //console.log(completeResponse);
             parseString(completeResponse, function (err, result) {
                 //console.dir(result);
+                var objeto = Array();
                 var obj = result.markers.marker;
                 for(i in obj){
-                  //console.log(obj[i].$);
+                  var imge = "http://www.igepn.edu.ec/portal/ultimo-sismo/event/"+obj[i].$.id+"/"+obj[i].$.id+"-gmapa.png";
+                  objeto.push({"id":obj[i].$.id,"lat":obj[i].$.lat,"long":obj[i].$.lng,"mag":obj[i].$.mg,"prof":obj[i].$.z,"fecha":obj[i].$.fecha,"hora":obj[i].$.fecha,"img":imge,"direccion":obj[i].$.localizacion});
+                  //console.log(obj[i].$.lat);
                 }
-
+                console.log(objeto);
                 res.setHeader('Content-Type', 'application/json');
-                res.send(JSON.stringify(result.markers.marker));
+                res.send(JSON.stringify(objeto));
                 //res.send("s");
             });
         })
