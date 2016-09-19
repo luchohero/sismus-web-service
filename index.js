@@ -4,7 +4,9 @@ var parseString = require('xml2js').parseString;
 var app = express();
 function dateFormat(d)
 	{
-		return d.getDate()+"/"+d.getMonth()+"/"+d.getFullYear()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+    var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+    var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+    return diasSemana[d.getDay()]+" "+d.getDate()+" de "+meses[d.getMonth()];
 	}
 
   function llenar_fecha(){
@@ -52,11 +54,12 @@ app.get("/", function (req, res) {
                   var fecha = new Date(obj[i].$.fecha);
                   var tz=5;
                   var seconds=(tz*60*60)*1000;
-                  console.log(obj[i].$.fecha);
+                  //console.log(obj[i].$.fecha);
                   fecha.setTime(fecha.getTime()-seconds);
-                  console.log(dateFormat(fecha));
+                  //console.log(dateFormat(fecha));
+                  var prof = parseFloat(obj[i].$.z);
                   var imge = "http://www.igepn.edu.ec/portal/ultimo-sismo/event/"+obj[i].$.eventoid+"/"+obj[i].$.eventoid+"-gmapa.png";
-                  objeto.push({"id":obj[i].$.eventoid,"lat":obj[i].$.lat,"long":obj[i].$.lng,"mag":obj[i].$.mg,"prof":obj[i].$.z,"fecha":llenar_fecha(fecha),"hora":llenar_hora(fecha),"img":imge,"direccion":obj[i].$.localizacion});
+                  objeto.push({"id":obj[i].$.eventoid,"lat":obj[i].$.lat,"long":obj[i].$.lng,"mag":obj[i].$.mg,"prof":prof.toFixed(2),"fecha":dateFormat(fecha),"hora":llenar_hora(fecha),"img":imge,"direccion":obj[i].$.localizacion});
 
 
                   //console.log(obj[i].$.lat);
