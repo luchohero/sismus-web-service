@@ -23,11 +23,15 @@ app.get("/", function (req, res) {
                 var objeto = Array();
                 var obj = result.markers.marker;
                 for(i in obj){
+                  var fecha = new Date(obj[i].$.fecha);
                   var imge = "http://www.igepn.edu.ec/portal/ultimo-sismo/event/"+obj[i].$.eventoid+"/"+obj[i].$.eventoid+"-gmapa.png";
-                  objeto.push({"id":obj[i].$.eventoid,"lat":obj[i].$.lat,"long":obj[i].$.lng,"mag":obj[i].$.mg,"prof":obj[i].$.z,"fecha":obj[i].$.fecha,"hora":obj[i].$.fecha,"img":imge,"direccion":obj[i].$.localizacion});
+                  objeto.push({"id":obj[i].$.eventoid,"lat":obj[i].$.lat,"long":obj[i].$.lng,"mag":obj[i].$.mg,"prof":obj[i].$.z,"fecha":fecha,"hora":obj[i].$.fecha,"img":imge,"direccion":obj[i].$.localizacion});
+
+                  console.log(obj[i].$.fecha);
+                  console.log(fecha);
                   //console.log(obj[i].$.lat);
                 }
-                console.log(objeto);
+                //console.log(objeto);
                 res.setHeader('Content-Type', 'application/json');
                 res.send(JSON.stringify(objeto));
                 //res.send("s");
