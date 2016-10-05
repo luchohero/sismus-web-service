@@ -1,8 +1,9 @@
 # sismus-web-service
-Web Service SISMUS APP
+<h1>Web Service SISMUS APP</h1>
 
-web service para Simus App, datos extraidos de : 
+web service para Simus App, datos extraidos de : </br>
 http://www.igepn.edu.ec/portal/ultimo-sismo/events.xml
-
-Web
+</br>
+<h2>Web</h2>
+</br>
 <a href="http://www.luchohero.com/sismus-sismo-detector/">SISMO DETECTOR</a>
