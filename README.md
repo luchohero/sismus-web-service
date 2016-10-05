@@ -1,5 +1,5 @@
 # sismus-web-service
-<h1>Web Service SISMUS APP</h1>
+<h2>Web Service SISMUS APP</h2>
 
 web service para Simus App, datos extraidos de : </br>
 http://www.igepn.edu.ec/portal/ultimo-sismo/events.xml
