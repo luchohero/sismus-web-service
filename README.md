@@ -1,7 +1,7 @@
 # sismus-web-service
 <h2>Web Service SISMUS APP</h2>
 
-web service para Simus App, datos extraidos de : </br>
+datos extraidos de : </br>
 http://www.igepn.edu.ec/portal/ultimo-sismo/events.xml
 </br>
 <h2>Web</h2>
